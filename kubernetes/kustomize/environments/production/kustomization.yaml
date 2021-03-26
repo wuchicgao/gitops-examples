@@ -6,7 +6,13 @@ bases:
 
 patches:
   - path: replica_count.yaml
+    target:
+      kind: Deployment
+      name: example-deploy
   - path: resource_limits.yaml
+    target:
+      kind: Deployment
+      name: example-deploy
 configMapGenerator:
 - name: example-config
   namespace: example

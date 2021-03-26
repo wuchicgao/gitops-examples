@@ -5,8 +5,8 @@ bases:
   - ../../application
 
 patches:
-  - replica_count.yaml
-  - resource_limits.yaml
+  - path: replica_count.yaml
+  - path: resource_limits.yaml
 configMapGenerator:
 - name: example-config
   namespace: example

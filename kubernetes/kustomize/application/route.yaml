@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app: 5000-example
+  name: 5000-example
+  namespace: example
+spec:
+  host: "5000-example.apps-crc.testing"
+  port:
+    targetPort: 5000
+  to:
+    kind: Service
+    name: 5000-example
+    weight: 100
+status:
+  ingress:
+  - conditions:
+    - status: "True"
+      type: Admitted
